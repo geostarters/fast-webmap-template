@@ -1,0 +1,36 @@
+#sidebar {
+    --sidebar-width: 300px;
+    --sidebar-width-hidden: -305px;
+    --sidebar-width-button: 350px;
+}
+
+#sidebar {
+    position: fixed;
+    border-radius: 0px;
+    overflow-y: auto;
+    width: var(--sidebar-width-button);
+    height: calc(100% - 95px);
+}
+
+#panel {
+    width: var(--sidebar-width);
+    max-height: 100%;
+    background-color: var(--panel-background);
+    overflow-y: auto;
+}
+
+#toggleBtn {
+    position: absolute;
+    right: 0px;
+    top: 15px;
+}
+
+.movein {
+    transition: all .75s;
+    transform: translateX(0px);
+}
+
+.moveout {
+    transition: all .75s;
+    transform: translateX(var(--sidebar-width-hidden));
+}
